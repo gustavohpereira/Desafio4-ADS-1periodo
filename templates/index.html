@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/reset.css') }} ">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css') }}">
+    
+    <title>Home</title>
+</head>
+<body class="body_home">
+    <header class="cabeçalho">
+        <img src="{{url_for('static',filename='img/logo.png')}}" class="header_img">
+        <ul class="header_links">
+            <li class="link_lista">
+                <a href="/">Home</a>
+                
+            </li>
+            <li class="link_lista link_meio">
+                <a href="/quemSomos">Quem somos</a>
+                
+            </li>
+            <li class="link_lista">
+                <a href="/contatos">Contato</a>
+                
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="banner">
+            <img src="../static/img/capa.png">
+        </div>
+        <h1 class="titulo_principal">Sobre a universidade</h1>
+        <p class="texto_lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut odio quod labore deleniti voluptatibus, impedit animi voluptatem fugiat accusantium et quae qui aliquid voluptates cupiditate libero maiores aperiam velit fuga Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor officia est fugiat tempore tenetur eligendi distinctio, mollitia odio vitae autem excepturi iusto, animi voluptatibus eveniet temporibus ipsam veritatis, sit cupiditate.</p>
+        <p class="texto_lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis accusantium velit similique voluptas itaque sit sequi totam. Corrupti quos, delectus dignissimos accusamus vel est nobis quidem, cumque error non commodi lore Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, assumenda. Vel enim, excepturi dolore libero quasi ad quas adipisci inventore eos unde fuga laboriosam optio suscipit delectus corrupti eveniet alias!.</p>
+        
+    </main>    
+    <footer>
+        <h2 class="titulo_footer">Todos os direitos reservados</h2>
+    </footer>
+</body>
+</html>
