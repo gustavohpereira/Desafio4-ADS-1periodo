@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='css/reset.css') }} ">
     <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css') }}">
-    <title>Contato</title>
+    <title>Usuarios</title>
 </head>
+
 <body>
     <header class="cabeçalho">
         <img src="{{url_for('static',filename='img/logo.png')}}" class="header_img">
@@ -24,38 +25,21 @@
                 <a href="/contatos">Contato</a>
                 
             </li>
-            <li class="link_lista">
+            <li class="link_lista ">
                 <a href="/users">Usuarios</a>
                 
             </li>
         </ul>
     </header>
-    <main>
-        <h1 class="titulo_principal">Entre em contato</h1>
-        <p class="texto_lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quisquam maxime tempora doloribus, voluptatem deleniti? Aliquam itaque unde ad! Blanditiis similique, ullam doloremque itaque officia eos. Porro voluptates perferendis voluptate.</p>
-        <hr>
-       <form method="post" action="/contatos">
-
-        Seu e-mail: <br>
-        <input type="email" name="email" required> <br>
-
-        Assunto: <br>
-        <input type="text" name="assunto" required> <br>
-
-        Descrição: <br>
-        <input type="text" name="descricao" required> <br>
-
-        <input type="submit">
-
-
-
-
-       </form>
-
-    </main>
-    <footer>
-        <h2 class="titulo_footer">Todos os direitos reservados</h2>
-    </footer>
+    {% for user in userDetails %} 
+    
+    <p>EMAIL:{{user[0]}}</p>
+    <p>Assunto:{{user[1]}}</p>
+    <p>Descrição:{{user[2]}}</p>
+    <hr>
+    
+    
+    {% endfor %} 
     
 </body>
 </html>

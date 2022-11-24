@@ -1,6 +1,7 @@
 from distutils.log import debug
 from flask import Flask, render_template , url_for, request
 from flask_mysqldb import MySQL
+import functions as function
 
 
 
@@ -51,6 +52,15 @@ def contatos():
 
         return 'sucesso'
     return render_template('contato.html')
+
+
+@app.route('/users')
+def users():
+    
+    userDetails = function.findUsers()
+   
+
+    return render_template("users.html", userDetails=userDetails)
 
 if __name__ == "__main__":
     app.run(debug=True)
