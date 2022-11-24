@@ -30,21 +30,24 @@
         <h1 class="titulo_principal">Entre em contato</h1>
         <p class="texto_lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quisquam maxime tempora doloribus, voluptatem deleniti? Aliquam itaque unde ad! Blanditiis similique, ullam doloremque itaque officia eos. Porro voluptates perferendis voluptate.</p>
         <hr>
-        <ul>
-            <li class="input_container">
-                <label for="input_email"> Seu Email</label>
-                <input type="email" id="input_email" placeholder="Digite seu email">
-            </li>
-            <li class="input_container">
-                <label for="input_assunto">Assunto</label>
-                <input type="text" id="input_assunto" placeholder="Assunto do email">
-            </li>
-            <li class="input_container">
-                <label for="input_descrição">Descrição</label>
-                <input type="text" id="input_descrição" placeholder="Descreva sobre">
-            </li>
-        </ul>
-        <button>Enviar</button>
+       <form method="post" action="/contatos">
+
+        Seu e-mail: <br>
+        <input type="email" name="email" required> <br>
+
+        Assunto: <br>
+        <input type="text" name="assunto" required> <br>
+
+        Descrição: <br>
+        <input type="text" name="descricao" required> <br>
+
+        <input type="submit">
+
+
+
+
+       </form>
+
     </main>
     <footer>
         <h2 class="titulo_footer">Todos os direitos reservados</h2>
